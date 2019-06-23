@@ -1,4 +1,4 @@
-# Онлайн проект <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
+# Онлайн-проект <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
  
 ## [Материалы занятия](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFT1NxdTFOQ1dvVnM)  (скачать все патчи можно через Download папки patch)
 > **ВНИМАНИЕ! При удалении класса из исходников, его скомпилированная версия все еще будет находиться в target (и classpath). В этом случае (или в любом другом, когда проект начинает глючить) сделайте `mvn clean`.**
