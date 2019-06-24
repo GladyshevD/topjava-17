@@ -132,7 +132,7 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 > - В новом PostgreSQL для коннекта с базой на Heroku (AWS) добавился параметр `sslmode=require`.
 > - В новой IDEA еще необходимо настроить импортируемые схемы (`Schemas -> Current database -> public`)
 
-![image](https://user-images.githubusercontent.com/13649199/59811095-ffb01380-9310-11e9-828d-bc292ee7fc25.png)
+![image](https://user-images.githubusercontent.com/13649199/60019737-40a08300-9697-11e9-90cf-35675e903a3f.png)
 #### Apply 3_09_add_postgresql.patch
 -  <a href="http://habrahabr.ru/company/JetBrains/blog/204064/">Настройка Database в IDEA</a> и запуск SQL.
 
