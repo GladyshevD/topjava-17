@@ -130,7 +130,7 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQWtHYU1qTDlMWVE">Настройка Database в IDEA.</a>
 > - Креденшелы к базе Heroku (AWS)  находятся вверху `postgres.properties`. 
 > - В новом PostgreSQL для коннекта с базой на Heroku (AWS) добавился параметр `sslmode=require`.
-> - В новой IDEA еще необходимо настроить импортируемые схемы (`Schemas -> Current database -> public`)
+> - В новой IDEA еще необходимо настроить импортируемые схемы (`Schemas -> Current database`)
 
 ![image](https://user-images.githubusercontent.com/13649199/60019737-40a08300-9697-11e9-90cf-35675e903a3f.png)
 #### Apply 3_09_add_postgresql.patch
