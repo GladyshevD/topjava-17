@@ -26,8 +26,8 @@
 - **[Сравнение времени выполнения для разных индексов](meals_index.md)**
   - <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">На id как на primary key индекс создается автоматически</a>.
   - все запросы в таблицу meals у нас идут с `user_id`
-  - по полю `date_time` также есть запросы + мы по нему сортируем список результатов, те они- хорошие кандидаты для индексирования. 
-  - следует иметь в виду, индексы ускоряют операции чтения, но замедляют вставку и удаление, поэтому необходим анализ в реальном приложении
+  - по полю `date_time` также есть запросы + мы по нему сортируем список результатов, те они - хорошие кандидаты для индексирования.
+  - следует иметь в виду: индексы ускоряют операции чтения, но замедляют вставку и удаление, поэтому необходим анализ в реальном приложении
   - [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
   - [Оптимизация запросов. Часть 2](https://habrahabr.ru/post/203386/)
   - [Оптимизация запросов. Часть 3](https://habrahabr.ru/post/203484/)
@@ -43,7 +43,7 @@
 
 ## Занятие 4:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU005ZzBNZmZnTVU">Методы улучшения качества кода</a>
-- Сделайте интеграцию своего GitHub репозитория и подключите сверху своего [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)) интергацию с
+- Сделайте интеграцию своего GitHub-репозитория и подключите сверху своего [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)) интергацию с
   - <a href="https://www.codacy.com">Codacy Check code</a> (проверка стиля и поиск багов в коде).
      - добавил [Codacy configuration file](https://support.codacy.com/hc/en-us/articles/360005097654-Ignore-files-from-Codacy-analysis) для ислючения из проверок содержимого `webapp` и `READ.me` (на нашем проекте он выдает на них кучу ошибок)
      - после правок паттернов можно сделать [повторный анализ](https://support.codacy.com/hc/en-us/articles/213840489-How-do-I-reanalyze-my-project-). С результатами тормозит.  
@@ -57,7 +57,7 @@
 #### **Apply 4_4_improve_code.patch**
 Для пояснения материала видео сделал проверку предусловий по разному: `Objects.requireNonNull` и `Assert.notNull`. В реальном проекте везде используются один подход.
 
-> - Перенес проверки предусловий `Assert` из `InMemory` репозиториев в сервисы
+> - Перенес проверки предусловий `Assert` из `InMemory`-репозиториев в сервисы
 > - Добавил конфигурацию `.travis.yml` и `.codacy.yml`
 
 - <a href="https://ru.wikipedia.org/wiki/Контрактное_программирование">Контрактное программирование</a>, <a href="http://neerc.ifmo.ru/wiki/index.php?title=Программирование_по_контракту">Программирование по контракту</a>
@@ -78,7 +78,7 @@
 <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
 
 > - ВНИМАНИЕ: патч меняет `postgres.properties`, в котором у вас возможно свои креденшелы к базе.
-> - `hibernate-core` с 5.2.x включает `hibernate-entitymanager` и `hibernate-java8`, Time API конверторы уже не нужны.
+> - `hibernate-core` с 5.2.x включает `hibernate-entitymanager` и `hibernate-java8`, конверторы Time API уже не нужны.
 >    -  <a href="http://stackoverflow.com/questions/23718383/jpa-support-for-java-8-new-date-and-time-api">JPA support for Java 8 new date and time API</a>
 >    -  <a href="http://stackoverflow.com/questions/31965179/whats-new-in-hibernate-5">What's new in Hibernate 5?</a>
 >    -  <a href="http://stackoverflow.com/a/33001846/548473">JPA support for Java 8 new date and time API</a>
@@ -146,45 +146,45 @@
 
 Просто с ней приходилось работать. HSQLDB и H2 наиболее популярны, в новом курсе по spring-boot планирую использовать H2.
 Здесь интересное краткое описание <a href="http://easyjava.ru/data/vstraivaemye-bazy-dannyx-v-java/">встраиваемых баз данных в Java</a>. 
-В HSQLDB нет репликаций, кластеризации и объем данным ограничен несколькими TB. Для большого количества приложений она подходит и для продакшена. См.
+В HSQLDB нет репликаций, кластеризации, и объем данным ограничен несколькими TB. Для большого количества приложений она подходит и для продакшена. См.
 - <a href="http://stackoverflow.com/questions/4152911/what-is-hsqldb-limitations">What is HSQLDB limitations?</a>
 - <a href="https://habrahabr.ru/sandbox/23199/">HSQLDB в режиме in-process</a>
 
 > Чистого JPA не существует, т.е. это всего лишь интерфейс, спецификация? Говорим JPA, подразумеваем какой-то ORM фрэймворк? А что тогда используют чистый jdbc, Spring-jdbc, MyBatis? MyBatis не реализует JPA?
 
 <a href="https://ru.wikipedia.org/wiki/ORM">ORM</a> это технология связывания БД и объектов приложения, а <a href="https://ru.wikipedia.org/wiki/Java_Persistence_API">JPA</a> - это JavaEE спецификация (API) этой технологии.
-Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появиласть позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
+Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появилась позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
 
 > В зависимостях maven `hibernate-entitymanager` тянет за собой `jboss-logging`. Как будет происходить логгирование?
 
 <a href="http://stackoverflow.com/questions/11639997/how-do-you-configure-logging-in-hibernate-4-to-use-slf4j">How do you configure logging in Hibernate 4 to use SLF4J</a>: в нашем проекте автоматически подхватывается `logback-classic`.
 
-> В чем преимущество Hibernate ?
+> В чем преимущество Hibernate?
 
-Hibernate (как любая ORM) реализует маппинг таблиц в объекты Java. Когда мы добавим роли к пользователю вы увидете, насколько код будет проще, чем в jdbc. Также см. <a href="https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/">5 Reasons to Use JPA / Hibernate</a>
+Hibernate (как любая ORM) реализует маппинг таблиц в объекты Java. Когда мы добавим роли пользователю, вы увидите, насколько код будет проще, чем в jdbc. Также см. <a href="https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/">5 Reasons to Use JPA / Hibernate</a>
 
 > Чем отличается `@Column(nullable = false)`  от  `@NotNull` и есть ли необходимость указывать обе аннотации ?
 
-`@Column(nullable = false)` это атрибуты колонки таблицы базы. `@NotNull` - это валидация, которая происходит в приложении перед вставкой в базу. Если колонка ненулевая, то `NOT NULL` объязательна. Валидация- опциональна. Также см.
+`@Column(nullable = false)` - это атрибуты колонки таблицы базы. `@NotNull` - это валидация, которая происходит в приложении перед вставкой в базу. Если колонка ненулевая, то `NOT NULL` обязательна. Валидация - опциональна. Также см.
 <a href="http://stackoverflow.com/questions/7439504/">@NotNull vs @Column(nullable = false)</a>
 
-> почему мы в в бине `entityManagerFactory` не указали диалект базы данных?
+> почему мы в бине `entityManagerFactory` не указали диалект базы данных?
 
 Он [автоматически определяется из `DataSource` драйвера](http://stackoverflow.com/a/39817822/548473)
 
 > В чем разница между `persist` и `merge`
 
 <a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Подробный ответ со Stackovwrflow</a> с объяснением разницы. Упрощенно:
-  - `merge`, в отличие от `persist`, если entity нет в текущей сессии, делает запрос в базу данных
-  - entity, переданный в `merge` не меняется. Нужно использовать возвращаемый результат
+  - `merge`, в отличие от `persist`, делает запрос в базу данных, если entity нет в текущей сессии
+  - entity, переданный в `merge`, не меняется. Нужно использовать возвращаемый результат
 
-> `em.merge` - при отсутствии старой записи (несуществующее `id`) создает новую. Те в `JpaUserRepository` нарушается логика
+> `em.merge` - при отсутствии старой записи (несуществующий `id`) создает новую. Т. е. в `JpaUserRepository` нарушается логика
 
 В Hibernate есть такая бага: https://hibernate.atlassian.net/browse/HHH-1661
 - [Hibernate unexpectedly issues INSERT instead of throwing the javax.persistence.OptimisticLockException, when a nonexistent entity is passed to merge()](https://stackoverflow.com/questions/34249483)
 - [Should Hibernate Session#merge do an insert when receiving an entity with an ID?](https://stackoverflow.com/questions/21489300)
 
-Если это действительно наш критичный бизнес кейс (например с многопоточным удалением entity) нужно искать варианты обходного решения.
+Если это действительно наш критичный бизнес-кейс (например, с многопоточным удалением entity) нужно искать варианты обходного решения.
 Если же это результат неверного запроса, то, мое мнение, можно это оставить как есть.
 
 > Почему в проекте транзакционность сделана в слое репозитория, а не сервиса? Транзакциями удобнее пользоваться на слое сервисов, так как здесь  реализуется бизнес логика и бывает нужно делать несколько операций в одной транзакции.
@@ -198,39 +198,39 @@ Hibernate (как любая ORM) реализует маппинг таблиц
 - 1: Сделать из `Meal` Hibernate entity
   - <a href="http://stackoverflow.com/questions/17137307">Hibernate Validator: @NotNull, @NotEmpty, @NotBlank</a>
   - <a href="https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne">Реализация ManyToOne</a>
-- 2: Имплементировать и протестировать `JpaMealRepository`
+- 2: Имплементировать и протестировать `JpaMealRepository`.
 
 #### Optional
 
 - 3: Добавить в тесты `MealServiceTest` функциональность `@Rule`:
   - 3.1: проверку Exception
-  - 3.2: вывод в лог времени выполнения каждого теста 
-  - 3.3: вывод сводки в конце класса: имя теста - время выполнения 
+  - 3.2: вывод в лог времени выполнения каждого теста
+  - 3.3: вывод сводки в конце класса: имя теста - время выполнения
 -  <a href="https://github.com/junit-team/junit/wiki/Rules">JUnit @Rules</a>
 -  <a href="http://blog.qatools.ru/junit/junit-rules-tutorial#expectedexcptn">замена ExpectedException</a>
 
 ---------------------
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Типичные ошибки и подсказки по реализации
--  1: Тк. JPQL работает с объектами мы не можем использовать `userId` для сохранения. Можно сделать например так:
+-  1: Т.к. JPQL работает с объектами, мы не можем использовать `userId` для сохранения. Можно сделать, например, так:
 
         User ref = em.getReference(User.class, userId);
         meal.setUser(ref);
 
-   При этом от `User` нам нужет только `id`. Создается lazy прокси над `id`, которая обращается к базе при запросе любого поля. Т.е. у нас запроса в базу за юзером не будет- проверьте по логам Hibernate
+   При этом от `User` нам нужен только `id`. Над `id` создается lazy прокси, который обращается к базе при запросе любого поля. Т.е. у нас запроса в базу за юзером не будет- проверьте по логам Hibernate.
 
 **Внимание: проверять запросы Hibernate нужно через run. Если делаете debug и брекпойнт, то могут делаться лишние запросы к базе (дебаггер дергает `toString`)**
    
 - 2: В JPQL запросах можно писать: `m.user.id=:userId`
-- 3: При реализации `JpaMealRepository` предпочтительно не использовать `try-catch` в логике реализации. Но если очень хочется, то ловить только специфичекские эксепшены (пр. `NoResultException`), чтобы, например, при отсутствии коннекта к базе приложение отвечало адекватно.
-- 4: Мы будем смотреть генерацию db скриптов из модели, для корректной генерации нужно в `Meal` добавить `uniqueConstraints`
-- 5: При записи в базу через `namedQuery` валидация ентити не работает, только валидация в бд
+- 3: При реализации `JpaMealRepository` предпочтительно не использовать `try-catch` в логике реализации. Но если очень хочется, то ловить только специфические исключения (напр. `NoResultException`), чтобы, например, при отсутствии коннекта к базе приложение отвечало адекватно.
+- 4: Мы будем смотреть генерацию db-скриптов из модели. Для корректной генерации нужно в `Meal` добавить `uniqueConstraints`
+- 5: При записи в базу через `namedQuery` валидация энтити не работает, только валидация в БД.
 - 6: Результат `AssertionError` печатает результаты через `toString`, который может не совпадать с полями сравнения.
 - 7: Если нашему приложению `Meal.user` не требуется, не следует включать его в тесты. В следующем уроке мы потренируемся разными способами доставать зависимости `Meal.user` и `User.meals`
 - 8: Старые версии IDEA тупят по поводу проверки `BETWEEN`. Обновитесь либо не обращайте внимания.
 
 --------------------------------
 ## [Выпускной проект](graduation.md)
-Новая информация плохо оседает в голове, когда дается в виде патчей, поэтому, чтобы она стала "твоей" нужно еще раз проделать все самостоятельно. Домашнее задание на этом уроке небольшое, а полученных знаний уже достаточно, чтобы после его выполнения начинать делать выпускной проект, сделанный на нашем стеке.
+Новая информация плохо оседает в голове, когда дается в виде патчей, поэтому, чтобы она стала "твоей", нужно еще раз проделать это самостоятельно. Домашнее задание на этом уроке небольшое, а полученных знаний уже достаточно, чтобы после его выполнения начинать делать выпускной проект, основанный на нашем стеке.
 Выпускной проект делаете в паралели с нашим: прошли тему занятия - сделали ее в выпускном. Не следует забегать вперед, но и не отставайте!
 - Для проекта я взял реальное тестовое задание, поэтому жалоб не неясность формулировок принимать не буду- сделайте как поняли. Представьте, что это **ваше тестовое задание на работу**.
 - Общение по выпусному в канале Slack *#graduation*
