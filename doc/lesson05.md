@@ -153,7 +153,7 @@
    -  <a href="https://blog.42.nl/articles/spring-data-jpa-with-querydsl-repositories-made-easy/">Spring Data JPA with QueryDSL</a>
    -  [SpEL support in Spring Data JPA @Query](https://spring.io/blog/2014/07/15/spel-support-in-spring-data-jpa-query-definitions)
 
-> Какой паттерн проектирования применён в классе DataJpaUserRepository (декоратор/адаптер/другой)?:
+> ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Какой паттерн проектирования применён в классе DataJpaUserRepository (декоратор/адаптер/другой)?:
 
 Вопрос интересный:) Ближе всего к адаптеру, но скорее композиция с делегированием. Мы просто используем для нашей реализации возможности `data-jpa: CrudUserRepository`.
 Делегат интерфейсов не меняет, а прокси похож на делегата, но служит для неявной подмены (часто прямо в рантайм). См. [ПАТТЕРНЫ
