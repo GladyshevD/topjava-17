@@ -41,6 +41,8 @@
 В реальном проекте часто проблему можно решить простым обновлением версии: <a href="http://hsqldb.org/">new HSQLDB version supports Java 8 time API</a>
 
 #### Apply 6_06_HW5_optional_fetch_join.patch
+#### Apply 6_06_fix  : удалил  `throws NotFoundException`
+
 > - Добавил проверки и тесты на `NotFound` для `MealService.getWithUser` и  `UserService.getWithMeals`
 > - Убрал `CascadeType.REMOVE`, в уроке далее будет про Cascade.
 
