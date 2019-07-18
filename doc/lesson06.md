@@ -308,10 +308,10 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
   -  <a href="http://stackoverflow.com/questions/4764405/how-to-use-relative-paths-without-including-the-context-root-name">Relative paths in JSP</a>
   -  <a href="http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-redirecting-redirect-prefix">Spring redirect: prefix</a>
 - 4: При проблемах с запуском Томкат проверьте запущенные процессы `java`, нет ли в `TOMCAT_HOME\webapps` приложения каталога `topjava`, логи tomcat (нет ли проблем с доступом к каталогам или контекстом Spring)
-- 5: Если создаете List с одним значением или Map с одним ключом-значением, пользуйтесь `Collections.singleton..`
+- 5: Если создаете неизменяемые List или Map, пользуйтесь `List.of()/ Map.of()`
 - 6: В MealController общую часть `@RequestMapping(value = "/meals")` лучше вынести на уровень класса
 - 7: Не забывайте при реализации `JdbcUserRepository` про `Map.computeIfAbsent`
 - 8: Проверьте `@Transactional(readOnly = true)` сверху `Jdbc..Repository`
-- 9: Проверьте, что `config\messages\app_ru.properties` у вас в кодировке UTF-8 (в любом редакторе/вьюере или при отключенном [Transparent native-to-ascii conversion](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8) в IDEA). ASCII-коды нужны были только для JSP
+- 9: Проверьте, что `config\messages\app_ru.properties` у вас в кодировке UTF-8 (в любом редакторе/вьюере или при отключенном [Transparent native-to-ascii conversion](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8) в IDEA).
 - 10: Учтите, что роли у юзеров можно менять/добавлять/удалять
 - 11: Убедитесь, что все методы UserService корректно работают с юзерами, у которых несколько ролей
