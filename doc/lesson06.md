@@ -275,7 +275,7 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 
 #### Optional
 - 2.1 Добавить транзакционность (`DataSourceTransactionManager`) в Jdbc-реализации  
-- 2.2 Добавить еще одну роль к юзеру Admin (будет 2 роли: `ROLE_USER, ROLE_ADMIN`). Проверьте наши тесты для Admin с 2-мя ролями.
+- 2.2 Добавить еще одну роль к юзеру Admin (будет 2 роли: `ROLE_USER, ROLE_ADMIN`).
 - 2.3 Добавить проверку ролей в UserTestData.assertMatch
 - 2.4 Починить имеющиеся и добавить новые тесты в `JdbcUserRepository` (добавить роли). Доставать можно двумя способами: одним запросом с JOIN либо двумя запросами (отдельно `users` и отдельно `roles`).
   - 2.4.1 В реализации `getAll` НЕ делать запрос ролей для каждого юзера (N+1 select)
@@ -314,4 +314,4 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 - 8: Проверьте `@Transactional(readOnly = true)` сверху `Jdbc..Repository`
 - 9: Проверьте, что `config\messages\app_ru.properties` у вас в кодировке UTF-8 (в любом редакторе/вьюере или при отключенном [Transparent native-to-ascii conversion](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8) в IDEA).
 - 10: Учтите, что роли у юзеров можно менять/добавлять/удалять
-- 11: Убедитесь, что все методы UserService корректно работают с юзерами, у которых несколько ролей
+- 11: Убедитесь, что все методы UserService корректно работают с юзерами, у которых несколько ролей (**запусти наши тесты для Admin с 2-мя ролями**)
