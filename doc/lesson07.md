@@ -126,7 +126,7 @@ GROUP BY u.id
 #### Apply 7_15_fix_integration.patch
 - Убрал лишний `import` и исключил `*.sql` файлы из анализа Сodacy
 - Починил проблему с [postgresql в Travis CI](https://stackoverflow.com/a/49852690/548473)
-- Внес `*.patch` в `.gitignore`: IDEA [стала нативно поддерживать ignore от систем версионирования и отказалась от собственной](https://blog.jetbrains.com/idea/2019/07/support-for-vcs-ignores-in-intellij-idea-and-intellij-based-ides)
+- Внес `*.patch` в `.gitignore`: IDEA [стала нативно поддерживать `ignores` от систем версионирования и отказалась от собственной](https://blog.jetbrains.com/idea/2019/07/support-for-vcs-ignores-in-intellij-idea-and-intellij-based-ides)
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 > При выполнении тестов через MockMvc никаких изменений на базе не видно, почему оно не сохраняет?
