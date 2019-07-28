@@ -24,6 +24,8 @@
 #### Apply 7_05_fix_hint_graph.patch
 - В `JpaUserRepositoryImpl.getByEmail` DISTINCT попадает в запрос, хотя он там не нужен. Это просто указание Hibernate не дублировать данные.
 Для оптимизации можно указать Hibernate делать запрос без distinct: [15.16.2. Using DISTINCT with entity queries](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#hql-distinct)
+   - Бага [HINT_PASS_DISTINCT_THROUGH does not work if 'hibernate.use_sql_comments=true'](https://hibernate.atlassian.net/browse/HHH-13280). При `hibernate.use_sql_comments=false` все работает- в SELECT нет DISTINCT.
+
 - Тест `DataJpaUserServiceTest.testGetWithMeals()` не работает для admin (у админа 2 роли, и еда при JOIN дублируется). `DISTINCT` при нескольких JOIN не помогает.
 Оставил в графе только `meals`. Корректно поставить тип `LOAD`, чтобы остальные ассоциации доставались по стратегии модели. Однако [с типом по умолчанию `FETCH` роли также достаются](https://stackoverflow.com/a/46013654/548473)  (похоже, что бага).
 
