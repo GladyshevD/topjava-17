@@ -9,7 +9,7 @@
 
 #### Apply 9_0_fix.patch
 - удалил `value` из `@RequestParam/@PathVariable`. [Имя параметра определяется на основе байткода](https://habr.com/ru/post/440214/).
-- удалил версию `jsonassert`, от которого мы отказались в `7_13_tests_refactoring`
+- удалил версию `jsonassert`, от которого мы отказались в `7_13_tests_refactoring.patch`
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW8
 
