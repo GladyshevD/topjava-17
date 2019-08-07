@@ -144,7 +144,7 @@ C `@BatchSize(size = 200)` делается запрос на юзеров (1), 
 
 #### Apply 6_13_tomcat_pool_jndi_cargo.patch
 > - для запуска в Tomcat 9 поменял `tomcat7-maven-plugin` на `cargo-maven2-plugin`.
-> - плагин сконфигурирован под postgres. Для HSQLDB нужно скорректировать `dependencies` и `driverClassName` в `context.xml`
+> - плагин сконфигурирован под postgres. Для HSQLDB нужно скорректировать `driverClassName` + `validationQuery="SELECT 1 FROM INFORMATION_SCHEMA.SYSTEM_USERS` в `context.xml` и `dependencies`.
 
 > ![](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Томкат сам управляет пулом коннектов? На каждый запрос в браузере будет даваться свой коннект?
  
