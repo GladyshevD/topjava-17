@@ -1,7 +1,5 @@
 # Онлайн-проекта <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
 
-### Обновил <a href="http://topjava.herokuapp.com/">Демо приложение</a> нашей версией
-
 ## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSzlObk8tbHdtcXc">Материалы занятия</a>
 #### Некоторые темы урока новые, поэтому видео есть не везде. Постараюсь дополнить после 29.08
 ## Все материалы проекта (в том числе и будущие обновления) останутся доступны в [Google Drive](https://drive.google.com/drive/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU)
