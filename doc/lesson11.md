@@ -1,5 +1,9 @@
 # Онлайн-проекта <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
 
+### Внимание: до 29.08 буду доступен ограниченно. Все организационные и технические проблемы решу по приезду. 
+> Заполняйте [форму проверки выпускного проекта](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q), проверять буду после 01.09. Срок сдачи - до 19.09.2019 (если не пошли на MasterJava).
+По стажировке AT Consulting будет информация в середине сентября. Для участия в ней необходимо желание и возможность трудоустроится в компанию (Москва, Санкт-Петербург) и успешно сданный выпускной (проект запускается, запросы проходят, грубых ляпов нет). Перечитайте [Рекомендации](https://github.com/JavaWebinar/topjava/blob/doc/doc/graduation.md#-рекомендации) еще раз и очень внимательно!
+
 ## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSzlObk8tbHdtcXc">Материалы занятия</a>
 #### Некоторые темы урока новые, поэтому видео есть не везде. Постараюсь дополнить после 29.08
 ## Все материалы проекта (в том числе и будущие обновления) останутся доступны в [Google Drive](https://drive.google.com/drive/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU)
